@@ -82,7 +82,7 @@ The following large artifacts are intentionally not stored in Git:
 - GRPO checkpoints and optimizer state;
 - vLLM and Slurm logs not needed for plotted training curves.
 
-A versioned data archive with immutable DOI and checksums should be created before manuscript submission. The DOI placeholder in `paper_artifacts/experiment_manifest.yaml` must then be replaced. Fine-tuned weights are not part of the initial release; direct inference reproduction therefore requires retraining from the released code/configuration/data generator.
+The versioned data archive and its checksums are available in the [Zenodo reproducibility dataset](https://doi.org/10.5281/zenodo.21669697). Fine-tuned weights are not part of the initial release; direct inference reproduction therefore requires retraining from the released code/configuration/data generator.
 
 ## 7. Numerical Compatibility
 

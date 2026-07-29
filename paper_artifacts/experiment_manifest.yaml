@@ -5,13 +5,13 @@ protocol_id: perturbed_imc_delay_stratified_v1
 code_license: PolyForm-Noncommercial-1.0.0
 data_documentation_license: CC-BY-NC-4.0
 prepared_from_internal_commit: 0b064d6d96517b825673fb6e190812b3ccb51c00
-public_release_commit: PENDING
-public_repository_url: PENDING
+public_release_commit: e7cbf454d1e6e6fa2a0502376c662d43802526f9
+public_repository_url: https://github.com/PSEZJUCE/LLMPIDTuner-public
 software_archive_doi: PENDING
 raw_results_archive:
   included_in_git: false
-  doi: PENDING
-  checksum_manifest: PENDING
+  doi: 10.5281/zenodo.21669697
+  checksum_manifest: SHA256SUMS.txt
 model_weights:
   included: false
   note: "The initial release provides training code, configurations, generators, and logs; weights require retraining."

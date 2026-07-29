@@ -23,7 +23,7 @@ SFT uses 40,000 generated balanced-style samples (20,000 FOPDT and 20,000 SOPDT)
 
 GRPO samples balanced first-turn prompts online. The reward combines:
 
-- Pad茅/Routh-Hurwitz stability screening;
+- Padé-based Routh-Hurwitz stability screening;
 - exact-delay frequency-domain stability margin;
 - time-domain performance;
 - IAE improvement;

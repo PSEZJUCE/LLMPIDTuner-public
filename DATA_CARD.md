@@ -59,7 +59,7 @@ Detailed equations, parameter ranges, delay strata, fault schedules, and determi
 
 ## Distribution
 
-Frozen source cases and demonstrations are included in Git. Compact paper tables and figures are in `paper_artifacts/`. These research artifacts are licensed under CC BY-NC 4.0. Full raw evaluation runs and generated training data will be deposited separately with checksums, the same data-license scope, and a DOI.
+Frozen source cases and demonstrations are included in Git. Compact paper tables and figures are in `paper_artifacts/`. These research artifacts are licensed under CC BY-NC 4.0. Full raw evaluation runs, generated training data, training records, frozen protocol materials, and checksums are archived in the [Zenodo reproducibility dataset](https://doi.org/10.5281/zenodo.21669697) under the same data-license scope.
 
 ## Limitations
 

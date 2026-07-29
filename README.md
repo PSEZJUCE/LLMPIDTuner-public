@@ -3,6 +3,8 @@
 > **Associated arXiv paper:** The code and released results in this repository correspond to *A Physics-Informed Framework for PID Tuning of Chemical Processes Using Large Language Model Agents*. The arXiv link will be updated after submission: [arXiv preprint](https://arxiv.org/abs/XXXX.XXXXX).
 >
 > **Relationship to the master's thesis:** This repository is an improved and extended implementation developed on the basis of Zhoupeng Shou's master's thesis work. Its code architecture, experiment protocol, generated cases, demonstrations, SFT/GRPO pipeline, stability treatment, and reported results have been revised; it is therefore not identical to, and should not be interpreted as a complete reproduction of, the original master's thesis.
+>
+> **Reproducibility dataset:** Full raw evaluation runs, the balanced 40,000-row SFT dataset, training records, and frozen protocol materials are archived at [Zenodo](https://doi.org/10.5281/zenodo.21669697).
 
 LLMPIDTuner is a reproducible research codebase for response-diagnostic PID tuning of FOPDT and SOPDT processes. It supports four comparable routes:
 
@@ -149,7 +151,7 @@ Generate manuscript figures from completed result directories:
 uv run python scripts/paper/generate_paper_figures.py all
 ```
 
-The compact figure/table snapshot used for manuscript preparation is included under `paper_artifacts/`. Full raw run directories are distributed separately because they are too large and file-heavy for a normal Git repository. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+The compact figure/table snapshot used for manuscript preparation is included under `paper_artifacts/`. Full raw run directories and the generated SFT dataset are archived in the [Zenodo reproducibility dataset](https://doi.org/10.5281/zenodo.21669697) because they are too large and file-heavy for a normal Git repository. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 ## Reproducibility Rules
 
@@ -160,7 +162,7 @@ The compact figure/table snapshot used for manuscript preparation is included un
 
 ## Citation and License
 
-Citation metadata is provided in [CITATION.cff](CITATION.cff). The final repository URL, arXiv identifier, and archival DOI will be added when available.
+Citation metadata is provided in [CITATION.cff](CITATION.cff). The reproducibility dataset is available at [Zenodo](https://doi.org/10.5281/zenodo.21669697); the arXiv identifier and software archive DOI will be added when available.
 
 The software is released under the [PolyForm Noncommercial License 1.0.0](LICENSE). Frozen cases, demonstrations, documentation, figures, and result tables are released under [CC BY-NC 4.0](LICENSE-DATA). Academic and other noncommercial use is permitted under those terms; commercial use requires a separate written license from the relevant rights holders. See [LICENSES.md](LICENSES.md) for the exact scope.
 
