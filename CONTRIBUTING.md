@@ -3,7 +3,7 @@
 Contributions should preserve numerical compatibility unless a protocol change is explicitly proposed.
 
 1. Create a focused branch and keep unrelated refactors separate.
-2. Use `uv sync --extra dev`.
+2. Use `uv sync --group dev`.
 3. Run `uv run ruff check src tests scripts/paper`.
 4. Run `uv run pytest -q`.
 5. Run `uv run llmpidtuner build-protocol-assets --check`.

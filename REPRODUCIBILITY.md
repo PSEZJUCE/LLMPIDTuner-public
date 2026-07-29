@@ -5,7 +5,7 @@ This guide separates four reproducibility levels so that readers can reproduce t
 ## 1. Environment and Protocol Check
 
 ```bash
-uv sync --extra dev
+uv sync --group dev
 uv run pytest -q
 uv run llmpidtuner build-protocol-assets --check
 ```

@@ -42,7 +42,7 @@ Python is pinned to 3.12.11 in `.python-version`; `pyproject.toml` accepts Pytho
 For simulation, API evaluation, plotting, and development:
 
 ```bash
-uv sync --extra dev
+uv sync --group dev
 uv run pytest -q
 ```
 
