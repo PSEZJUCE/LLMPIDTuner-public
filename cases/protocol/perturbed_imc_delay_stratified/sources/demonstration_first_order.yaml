@@ -1,0 +1,692 @@
+schema_version: 1
+protocol_id: perturbed_imc_delay_stratified_v1
+purpose: frozen_demonstration
+seed: 51001
+count: 10
+simulation:
+  setpoint: 1.0
+  sim_time: 4000.0
+  num_points: 40001
+  time_delay: 1.0
+  max_abs_output: 3.0
+process_ranges:
+  first_order:
+    k:
+    - 0.2
+    - 0.9
+    t:
+    - 100.0
+    - 600.0
+  second_order:
+    k:
+    - 0.1
+    - 3.0
+    tau_slow:
+    - 10.0
+    - 100.0
+    tau_fast_ratio:
+    - 0.1
+    - 1.0
+delay:
+  absolute_seconds:
+  - 1.0
+  - 200.0
+  rho_max: 0.8
+  bands:
+    low:
+    - 0.0
+    - 0.05
+    medium:
+    - 0.05
+    - 0.2
+    delay_dominant:
+    - 0.2
+    - 0.5
+    strong_delay:
+    - 0.5
+    - 0.8
+  quota_per_10:
+  - low
+  - low
+  - low
+  - low
+  - medium
+  - medium
+  - medium
+  - delay_dominant
+  - delay_dominant
+  - strong_delay
+fault_types:
+- p_high
+- p_low
+- i_high
+- i_low_or_off
+- i_high_d_high
+- p_high_d_low
+- p_high_i_high
+- p_low_i_high
+- i_high_d_low
+- p_low_i_high_d_low
+severity_definition:
+  mild:
+  - 1.5
+  - 2.0
+  moderate:
+  - 2.0
+  - 5.0
+  severe:
+  - 5.0
+  - null
+  authority: initial_IAE / balanced_IMC_IAE
+severity_counts:
+  mild: 3
+  moderate: 5
+  severe: 2
+fault_severity_schedules:
+  p_high:
+  - mild
+  - mild
+  - mild
+  - mild
+  - mild
+  - moderate
+  - moderate
+  - moderate
+  - severe
+  - severe
+  i_high:
+  - mild
+  - mild
+  - mild
+  - mild
+  - mild
+  - moderate
+  - moderate
+  - moderate
+  - severe
+  - severe
+  p_low:
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - severe
+  - severe
+  i_low_or_off:
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - severe
+  - severe
+  p_low_i_high:
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - moderate
+  - severe
+  - severe
+case_hashes:
+- 323179f47d69deeea89355b390a4b819bcdaaeff836d35b3b07814ce3354fde6
+- e49c60c08b6a484b45eaf54fead886bc7fdec35442a5980235d9ad83b4d89447
+- 6a0da1565b061f3d9aef5a8a77f68abf9a60f39a93c457c221b292568515e341
+- 168a9b9590f31d87f455aab818a0bb9d7d35178404f7fd8053fc3600d82391b8
+- 442aa5e570a40801d1f7d411e0aee2d42249133cf992b4e7a746f86daaa626f0
+- e5416006f5b229089d71fe14e75e523fabe92cce648eb0c74ecd392744e734f0
+- ed7bdb3c477fa6ddc43fa68c1e23dd81f723c68ecc3f2d15db79e774786a5138
+- f8d32f0ed60ab709d6f023a93f2262a54fcc5a30c849f395655dffd216791f42
+- 19036480739735d1fba1302f1cb6cc4171255bb79d5fabe8eeb23fdc319764fd
+- 751555d2e686f62500c72567dc1e3acf449bc2e665cb8dfbbf8ef1b1771e7752
+cases:
+- case_id: first_order_000001
+  system: first_order
+  plant:
+    k: 0.673102
+    t: 325.454
+  time_delay: 167.6
+  rho: 0.5149729301222292
+  initial_pid:
+    kp: 4.65668
+    ki: 0.00354573
+    kd: 96.7027
+  reference_pid:
+    kp: 1.4511
+    ki: 0.00354573
+    kd: 96.7027
+  fault_type: p_high
+  severity: mild
+  perturbation:
+    kp: 3.20906777787849
+    ki: 1.0
+    kd: 1.0
+  initial_metrics:
+    iae: 635.7447883573142
+    overshoot_pct: 47.92517521938049
+    settling_time: 2960.9
+    steady_state_error_pct: 2.482812777794241
+    oscillation_count: 6
+    final_value: 0.9753253659816643
+    max_value: 1.479251752193805
+    min_value: 0.0
+    control_rms: 1.8764771398584934
+    finite: true
+    settled: true
+    time_constant: 71.10000000000002
+  reference_metrics:
+    iae: 421.08017543307625
+    overshoot_pct: 0.10991236728457032
+    settling_time: 906.9000000000001
+    steady_state_error_pct: 0.0016020624927115534
+    oscillation_count: 0
+    final_value: 1.0000158163539115
+    max_value: 1.0010991236728457
+    min_value: 0.0
+    control_rms: 1.5148844073771162
+    finite: true
+    settled: true
+    time_constant: 250.20000000000002
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 2
+    perturbation_attempt: 40
+    case_hash: 323179f47d69deeea89355b390a4b819bcdaaeff836d35b3b07814ce3354fde6
+  group: 1
+- case_id: first_order_000002
+  system: first_order
+  plant:
+    k: 0.673102
+    t: 325.454
+  time_delay: 77.87
+  rho: 0.2392657641325656
+  initial_pid:
+    kp: 1.29872
+    ki: 0.00763148
+    kd: 96.7027
+  reference_pid:
+    kp: 2.78083
+    ki: 0.00763148
+    kd: 96.7027
+  fault_type: p_low
+  severity: mild
+  perturbation:
+    kp: 0.467026195468523
+    ki: 1.0
+    kd: 1.0
+  initial_metrics:
+    iae: 372.8335426574901
+    overshoot_pct: 15.49196786720608
+    settling_time: 1284.7
+    steady_state_error_pct: 0.019679302478581295
+    oscillation_count: 1
+    final_value: 0.9998050610058621
+    max_value: 1.1549196786720608
+    min_value: 0.0
+    control_rms: 1.5738587474378287
+    finite: true
+    settled: true
+    time_constant: 239.63
+  reference_metrics:
+    iae: 211.0193292296293
+    overshoot_pct: 1.2628055540627514
+    settling_time: 431.0
+    steady_state_error_pct: 0.0001362385599001925
+    oscillation_count: 0
+    final_value: 1.000001341779116
+    max_value: 1.0126280555406275
+    min_value: 0.0
+    control_rms: 1.5862683421313986
+    finite: true
+    settled: true
+    time_constant: 129.23000000000002
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 2
+    perturbation_attempt: 26
+    case_hash: e49c60c08b6a484b45eaf54fead886bc7fdec35442a5980235d9ad83b4d89447
+  group: 2
+- case_id: first_order_000003
+  system: first_order
+  plant:
+    k: 0.673102
+    t: 325.454
+  time_delay: 22.66
+  rho: 0.06962581501533242
+  initial_pid:
+    kp: 6.54725
+    ki: 0.11782
+    kd: 71.6848
+  reference_pid:
+    kp: 6.54725
+    ki: 0.0194405
+    kd: 71.6848
+  fault_type: i_high
+  severity: mild
+  perturbation:
+    kp: 1.0
+    ki: 6.06052885949881
+    kd: 1.0
+  initial_metrics:
+    iae: 130.78764329735495
+    overshoot_pct: 43.18993239790445
+    settling_time: 458.40000000000003
+    steady_state_error_pct: 8.65263416471862e-10
+    oscillation_count: 2
+    final_value: 1.0000000000068128
+    max_value: 1.4318993239790445
+    min_value: 0.0
+    control_rms: 1.8967558196694005
+    finite: true
+    settled: true
+    time_constant: 40.44
+  reference_metrics:
+    iae: 86.644217625988
+    overshoot_pct: 1.0391011919359983
+    settling_time: 193.60000000000002
+    steady_state_error_pct: 2.1650272419293515e-05
+    oscillation_count: 0
+    final_value: 1.0000002132271437
+    max_value: 1.01039101191936
+    min_value: 0.0
+    control_rms: 1.679766782740317
+    finite: true
+    settled: true
+    time_constant: 61.44000000000001
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 2
+    perturbation_attempt: 62
+    case_hash: 6a0da1565b061f3d9aef5a8a77f68abf9a60f39a93c457c221b292568515e341
+  group: 3
+- case_id: first_order_000004
+  system: first_order
+  plant:
+    k: 0.425166
+    t: 545.796
+  time_delay: 75.89
+  rho: 0.1390446247315847
+  initial_pid:
+    kp: 7.23664
+    ki: 0.00501073
+    kd: 256.745
+  reference_pid:
+    kp: 7.23664
+    ki: 0.012397
+    kd: 256.745
+  fault_type: i_low_or_off
+  severity: moderate
+  perturbation:
+    kp: 1.0
+    ki: 0.40418859168761
+    kd: 1.0
+  initial_metrics:
+    iae: 439.09792390618816
+    overshoot_pct: 0.0
+    settling_time: 2208.9
+    steady_state_error_pct: 1.7712643969382325
+    oscillation_count: 0
+    final_value: 0.9823382462826701
+    max_value: 0.9823382462826701
+    min_value: 0.0
+    control_rms: 2.5819137068145546
+    finite: true
+    settled: true
+    time_constant: 155.51
+  reference_metrics:
+    iae: 219.08968286166453
+    overshoot_pct: 1.633410302137639
+    settling_time: 440.8
+    steady_state_error_pct: 0.007312265925185635
+    oscillation_count: 0
+    final_value: 1.0000724615901104
+    max_value: 1.0163341030213764
+    min_value: 0.0
+    control_rms: 2.7543825473915096
+    finite: true
+    settled: true
+    time_constant: 133.11
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 3
+    perturbation_attempt: 31
+    case_hash: 168a9b9590f31d87f455aab818a0bb9d7d35178404f7fd8053fc3600d82391b8
+  group: 4
+- case_id: first_order_000005
+  system: first_order
+  plant:
+    k: 0.891506
+    t: 408.318
+  time_delay: 24.68
+  rho: 0.060443086026087514
+  initial_pid:
+    kp: 5.0195
+    ki: 0.121666
+    kd: 191.983
+  reference_pid:
+    kp: 5.0195
+    ki: 0.0119325
+    kd: 60.1236
+  fault_type: i_high_d_high
+  severity: moderate
+  perturbation:
+    kp: 1.0
+    ki: 10.1961544584336
+    kd: 3.19314178489362
+  initial_metrics:
+    iae: 213.14006567327826
+    overshoot_pct: 56.94173727857914
+    settling_time: 906.1
+    steady_state_error_pct: 0.00014231309464207698
+    oscillation_count: 4
+    final_value: 0.9999985936901757
+    max_value: 1.5694173727857914
+    min_value: 0.0
+    control_rms: 1.6093303388695537
+    finite: true
+    settled: true
+    time_constant: 49.52
+  reference_metrics:
+    iae: 104.7552580829402
+    overshoot_pct: 0.8718289527830381
+    settling_time: 242.60000000000002
+    steady_state_error_pct: 0.00022442491556251554
+    oscillation_count: 0
+    final_value: 1.000002217156375
+    max_value: 1.0087182895278304
+    min_value: 0.0
+    control_rms: 1.3013492292956128
+    finite: true
+    settled: true
+    time_constant: 77.82
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 4
+    perturbation_attempt: 80
+    case_hash: 442aa5e570a40801d1f7d411e0aee2d42249133cf992b4e7a746f86daaa626f0
+  group: 5
+- case_id: first_order_000006
+  system: first_order
+  plant:
+    k: 0.732926
+    t: 321.153
+  time_delay: 65.04
+  rho: 0.20252029406544544
+  initial_pid:
+    kp: 9.80284
+    ki: 0.00839111
+    kd: 26.5309
+  reference_pid:
+    kp: 2.96771
+    ki: 0.00839111
+    kd: 87.6359
+  fault_type: p_high_d_low
+  severity: moderate
+  perturbation:
+    kp: 3.3031654530177
+    ki: 1.0
+    kd: 0.30273990637872
+  initial_metrics:
+    iae: 373.8633962705039
+    overshoot_pct: 67.7145390755384
+    settling_time: 1791.4
+    steady_state_error_pct: 0.43444592876781263
+    oscillation_count: 10
+    final_value: 0.9956564661942611
+    max_value: 1.677145390755384
+    min_value: 0.0
+    control_rms: 2.389818893182104
+    finite: true
+    settled: true
+    time_constant: 29.260000000000005
+  reference_metrics:
+    iae: 179.84762632405315
+    overshoot_pct: 1.4364400410409317
+    settling_time: 364.90000000000003
+    steady_state_error_pct: 8.260676809257461e-05
+    oscillation_count: 0
+    final_value: 1.0000008134053977
+    max_value: 1.0143644004104093
+    min_value: 0.0
+    control_rms: 1.4699540131839415
+    finite: true
+    settled: true
+    time_constant: 109.96
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 7
+    perturbation_attempt: 41
+    case_hash: e5416006f5b229089d71fe14e75e523fabe92cce648eb0c74ecd392744e734f0
+  group: 6
+- case_id: first_order_000007
+  system: first_order
+  plant:
+    k: 0.632011
+    t: 471.5
+  time_delay: 15.28
+  rho: 0.032407211028632026
+  initial_pid:
+    kp: 75.828
+    ki: 0.158259
+    kd: 55.9121
+  reference_pid:
+    kp: 7.43692
+    ki: 0.0155214
+    kd: 55.9121
+  fault_type: p_high_i_high
+  severity: moderate
+  perturbation:
+    kp: 10.1961544584336
+    ki: 10.1961544584336
+    kd: 1.0
+  initial_metrics:
+    iae: 262.4877788955344
+    overshoot_pct: 98.6144328040413
+    settling_time: 1138.9
+    steady_state_error_pct: 0.0009577217750633693
+    oscillation_count: 38
+    final_value: 1.0000013948155195
+    max_value: 1.986144328040413
+    min_value: 0.0
+    control_rms: 13.030287314820267
+    finite: true
+    settled: true
+    time_constant: 6.320000000000002
+  reference_metrics:
+    iae: 107.6778450735544
+    overshoot_pct: 0.39995458169459486
+    settling_time: 280.2
+    steady_state_error_pct: 0.000431633993169811
+    oscillation_count: 0
+    final_value: 1.0000042711895405
+    max_value: 1.003999545816946
+    min_value: 0.0
+    control_rms: 1.8647496966199444
+    finite: true
+    settled: true
+    time_constant: 91.92
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 6
+    perturbation_attempt: 80
+    case_hash: ed7bdb3c477fa6ddc43fa68c1e23dd81f723c68ecc3f2d15db79e774786a5138
+  group: 7
+- case_id: first_order_000008
+  system: first_order
+  plant:
+    k: 0.732926
+    t: 321.153
+  time_delay: 1.127
+  rho: 0.0035092308027637915
+  initial_pid:
+    kp: 2.98618
+    ki: 0.0477712
+    kd: 3.81075
+  reference_pid:
+    kp: 6.77451
+    ki: 0.0210574
+    kd: 3.81075
+  fault_type: p_low_i_high
+  severity: moderate
+  perturbation:
+    kp: 0.440796730918377
+    ki: 2.26861936547613
+    kd: 1.0
+  initial_metrics:
+    iae: 131.60757053422205
+    overshoot_pct: 24.534953165375683
+    settling_time: 442.6
+    steady_state_error_pct: 2.502302587359395e-07
+    oscillation_count: 1
+    final_value: 0.999999997467635
+    max_value: 1.2453495316537568
+    min_value: 0.0
+    control_rms: 1.54650723912751
+    finite: true
+    settled: true
+    time_constant: 85.47300000000001
+  reference_metrics:
+    iae: 65.11049915697072
+    overshoot_pct: 0.022538752944645246
+    settling_time: 192.20000000000002
+    steady_state_error_pct: 7.925914147222102e-07
+    oscillation_count: 0
+    final_value: 1.0000000078044
+    max_value: 1.0002253875294465
+    min_value: 0.0
+    control_rms: 1.530497757906891
+    finite: true
+    settled: true
+    time_constant: 64.07300000000001
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 7
+    perturbation_attempt: 28
+    case_hash: f8d32f0ed60ab709d6f023a93f2262a54fcc5a30c849f395655dffd216791f42
+  group: 8
+- case_id: first_order_000009
+  system: first_order
+  plant:
+    k: 0.374795
+    t: 370.165
+  time_delay: 7.319
+  rho: 0.019772263720232868
+  initial_pid:
+    kp: 12.8379
+    ki: 1.6674
+    kd: 0.958143
+  reference_pid:
+    kp: 12.8379
+    ki: 0.0343421
+    kd: 46.5205
+  fault_type: i_high_d_low
+  severity: severe
+  perturbation:
+    kp: 1.0
+    ki: 48.5527745226132
+    kd: 0.0205961453250062
+  initial_metrics:
+    iae: 434.53273974218814
+    overshoot_pct: 93.71980250005574
+    settling_time: 1948.0
+    steady_state_error_pct: 0.028085440017489027
+    oscillation_count: 26
+    final_value: 0.9992658821759757
+    max_value: 1.9371980250005574
+    min_value: 0.0
+    control_rms: 9.257440194744124
+    finite: true
+    settled: true
+    time_constant: 22.081000000000003
+  reference_metrics:
+    iae: 80.19146065705793
+    overshoot_pct: 0.2167207680746852
+    settling_time: 220.4
+    steady_state_error_pct: 2.5633437861216635e-05
+    oscillation_count: 0
+    final_value: 1.0000002529223893
+    max_value: 1.0021672076807469
+    min_value: 0.0
+    control_rms: 3.0447376969547304
+    finite: true
+    settled: true
+    time_constant: 72.98100000000001
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 8
+    perturbation_attempt: 134
+    case_hash: 19036480739735d1fba1302f1cb6cc4171255bb79d5fabe8eeb23fdc319764fd
+  group: 9
+- case_id: first_order_000010
+  system: first_order
+  plant:
+    k: 0.712747
+    t: 140.495
+  time_delay: 2.424
+  rho: 0.01725328303498345
+  initial_pid:
+    kp: 1.02627
+    ki: 0.316373
+    kd: 1.2332
+  reference_pid:
+    kp: 6.78305
+    ki: 0.0478668
+    kd: 8.15075
+  fault_type: p_low_i_high_d_low
+  severity: severe
+  perturbation:
+    kp: 0.151298688227493
+    ki: 6.609442631098
+    kd: 0.151298688227493
+  initial_metrics:
+    iae: 153.1597637773094
+    overshoot_pct: 72.29358041042097
+    settling_time: 711.0
+    steady_state_error_pct: 2.6523914398168813e-06
+    oscillation_count: 9
+    final_value: 1.0000000329783816
+    max_value: 1.7229358041042098
+    min_value: 0.0
+    control_rms: 1.7331415399162118
+    finite: true
+    settled: true
+    time_constant: 28.176000000000002
+  reference_metrics:
+    iae: 30.153268801363325
+    overshoot_pct: 0.17670969585446006
+    settling_time: 83.7
+    steady_state_error_pct: 1.4876988529977098e-12
+    oscillation_count: 0
+    final_value: 1.000000000000015
+    max_value: 1.0017670969585446
+    min_value: 0.0
+    control_rms: 1.4813460713687885
+    finite: true
+    settled: true
+    time_constant: 27.776000000000003
+  provenance:
+    protocol_id: perturbed_imc_delay_stratified_v1
+    seed: 51001
+    candidate_index: 9
+    perturbation_attempt: 65
+    case_hash: 751555d2e686f62500c72567dc1e3acf449bc2e665cb8dfbbf8ef1b1771e7752
+  group: 10

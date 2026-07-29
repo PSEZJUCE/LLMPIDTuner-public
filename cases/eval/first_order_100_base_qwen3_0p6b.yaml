@@ -1,0 +1,31 @@
+system: first_order_batch
+mode: dry_run
+output_dir: runs
+control_style: balanced
+prompt_variant: full
+batch:
+  cases_path: cases/protocol/perturbed_imc_delay_stratified/sources/evaluation_first_order.yaml
+simulation:
+  setpoint: 1.0
+  sim_time: 4000.0
+  num_points: 40001
+  max_abs_output: 3.0
+demonstration:
+  method: frozen
+  protocol_id: perturbed_imc_delay_stratified_v1
+  control_style: balanced
+  prompt_variant: full
+  path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/first_order.txt
+  manifest_path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/first_order.manifest.yaml
+max_iterations: 8
+success:
+  overshoot: 15.0
+  steady_state_error: 1.0
+llm_profile: vLLM_qwen3-0.6b-base
+llm:
+  temperature: 0.1
+  top_p: 0.1
+  enable_thinking: false
+  max_tokens: 64
+  seed: 42
+  max_retries: 5

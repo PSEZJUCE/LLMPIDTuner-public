@@ -1,0 +1,4 @@
+label,batch_path,demonstration_protocol,total,converged,unconverged,llm_failed,context_length_exceeded,convergence_rate,mean_convergence_iteration,mean_final_overshoot,median_final_overshoot,mean_final_steady_state_error,median_final_steady_state_error,analysis_horizon
+DeepSeek-V4-Flash,runs\first_order_100_deepseek_v4_flash,perturbed_imc_delay_stratified_v1,100,75,25,0,0,0.75,1.3733333333333333,10.56312,5.882500000000002,0.0792562999999995,0.00018000000000517602,
+Qwen3.7-Plus,runs\first_order_100_qwen3_7_plus,perturbed_imc_delay_stratified_v1,100,89,11,0,0,0.89,1.2134831460674158,8.11678,2.102499999999996,0.23890480000000067,0.0,
+Base-0.6B,runs\first_order_100_base_qwen3_0p6b,perturbed_imc_delay_stratified_v1,100,13,87,0,0,0.13,1.0,56.45298,46.251000000000005,14.563751599999994,0.051570000000017435,

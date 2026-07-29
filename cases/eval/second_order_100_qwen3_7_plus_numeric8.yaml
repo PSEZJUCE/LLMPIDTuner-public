@@ -1,0 +1,30 @@
+system: second_order_batch
+mode: dry_run
+output_dir: runs
+control_style: balanced
+prompt_variant: numeric8
+batch:
+  cases_path: cases/protocol/perturbed_imc_delay_stratified/sources/evaluation_second_order.yaml
+simulation:
+  setpoint: 1.0
+  sim_time: 4000.0
+  num_points: 40001
+  max_abs_output: 3.0
+demonstration:
+  method: frozen
+  protocol_id: perturbed_imc_delay_stratified_v1
+  control_style: balanced
+  prompt_variant: numeric8
+  path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/numeric8/second_order.txt
+  manifest_path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/numeric8/second_order.manifest.yaml
+max_iterations: 8
+success:
+  overshoot: 15.0
+  steady_state_error: 1.0
+llm_profile: QWEN_qwen3.7-plus-2026-05-26
+llm:
+  temperature: 0.1
+  top_p: 0.1
+  enable_thinking: false
+  max_tokens: 64
+  max_retries: 5

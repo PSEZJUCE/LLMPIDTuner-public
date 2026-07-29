@@ -1,0 +1,83 @@
+[project]
+name = "llmpidtuner"
+version = "1.0.0"
+description = "Physics-informed PID tuning with API LLMs, supervised fine-tuning, GRPO, and shared control simulation."
+authors = [
+    { name = "Zhoupeng Shou" },
+    { name = "Xiaodong Hong" },
+    { name = "Congjing Ren" },
+    { name = "Jingdai Wang" },
+    { name = "Yongrong Yang" },
+    { name = "Zuwei Liao" },
+]
+keywords = ["PID control", "large language models", "SFT", "GRPO", "process control"]
+readme = "README.md"
+license = "PolyForm-Noncommercial-1.0.0"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "matplotlib==3.10.5",
+    "numpy==1.26.4",
+    "openai>=1.0",
+    "numba==0.61.2",
+    "openpyxl==3.1.5",
+    "pandas==2.3.1",
+    "python-dotenv>=1.0",
+    "pyyaml==6.0.2",
+    "scipy==1.16.1",
+]
+
+[project.scripts]
+llmpidtuner = "llmpidtuner.cli:main"
+
+[project.optional-dependencies]
+training = [
+    "accelerate==1.9.0",
+    "bitsandbytes==0.46.1",
+    "modelscope==1.28.1",
+    "peft==0.17.0",
+    "torch==2.7.1",
+    "transformers==4.54.0",
+]
+training-stack = [
+    "cupy-cuda12x==13.5.1",
+    "datasets==4.0.0",
+    "deepspeed==0.17.2",
+    "safetensors==0.5.3",
+    "sentencepiece==0.2.0",
+    "tokenizers==0.21.2",
+    "torchaudio==2.7.1",
+    "torchvision==0.22.1",
+    "trl==0.9.6",
+    "vllm==0.10.0",
+    "xformers==0.0.31",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".uv-cache",
+    ".venv",
+    "Archive",
+    "runs",
+]

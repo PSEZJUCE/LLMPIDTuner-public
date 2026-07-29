@@ -1,0 +1,92 @@
+model_name_or_path: outputs/sft/qwen3_0p6b_pid
+output_dir: outputs/grpo/qwen3_0p6b_pid
+control_style: balanced
+seed: 91001
+train_steps: 800
+prompts_per_step: 4
+num_generations: 4
+num_policy_epochs: 1
+micro_batch_size: 4
+learning_rate: 1.0e-5
+min_learning_rate: 1.0e-6
+warmup_steps: 50
+lr_decay_steps: 800
+weight_decay: 0.0
+max_grad_norm: 1.0
+max_prompt_length: 6144
+max_completion_length: 64
+temperature: 0.9
+top_p: 0.95
+top_k: 50
+clip_range: 0.2
+beta_kl: 0.10
+adaptive_kl: true
+target_kl: 0.05
+kl_tolerance: 2.0
+beta_kl_min: 0.02
+beta_kl_max: 1.0
+kl_ema_alpha: 0.10
+kl_update_interval: 10
+kl_beta_multiplier: 1.5
+kl_guard_multiplier: 4.0
+kl_guard_patience: 25
+bf16: true
+use_qlora: true
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.0
+second_order_prob: 0.5
+excluded_plants_paths:
+  - cases/protocol/perturbed_imc_delay_stratified/sources/demonstration_first_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/demonstration_second_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/evaluation_first_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/evaluation_second_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_first_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_second_order.yaml
+demonstration:
+  method: frozen
+  protocol_id: perturbed_imc_delay_stratified_v1
+  control_style: balanced
+  prompt_variant: full
+  paths:
+    first_order:
+      path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/first_order.txt
+      manifest_path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/first_order.manifest.yaml
+    second_order:
+      path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/second_order.txt
+      manifest_path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/second_order.manifest.yaml
+simulation:
+  setpoint: 1.0
+  sim_time: 4000.0
+  num_points: 40001
+  max_abs_output: 3.0
+save_every: 50
+log_every: 1
+save_rollouts_every: 20
+resume_from_checkpoint: null
+validation_cases_paths:
+  - cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_first_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_second_order.yaml
+validate_every: 50
+validation_batch_size: 8
+reward:
+  schema_version: 2
+  invalid_reward: -1.0
+  failed_branch_min: -0.5
+  failed_branch_max: 0.0
+  success_branch_min: 0.5
+  success_branch_max: 1.0
+  stability_weight: 0.35
+  performance_weight: 0.35
+  iae_weight: 0.15
+  regularization_weight: 0.10
+  format_weight: 0.05
+  pade_order: 1
+  routh_relative_tolerance: 1.0e-9
+  phase_log10_min: -5.0
+  phase_log10_max: 5.0
+  phase_grid_points: 2048
+  phase_bisection_iterations: 64
+  gain_multiplier_p: 4.0
+  gain_multiplier_i: 4.0
+  gain_multiplier_d: 6.0

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use LLMPIDTuner, please cite this software and the associated article."
+title: "LLMPIDTuner"
+type: software
+version: 1.0.0
+abstract: "A physics-informed framework for response-diagnostic PID tuning of FOPDT and SOPDT processes using API language models, supervised fine-tuning, online GRPO, and IMC baselines."
+authors:
+  - family-names: "Shou"
+    given-names: "Zhoupeng"
+  - family-names: "Hong"
+    given-names: "Xiaodong"
+  - family-names: "Ren"
+    given-names: "Congjing"
+  - family-names: "Wang"
+    given-names: "Jingdai"
+  - family-names: "Yang"
+    given-names: "Yongrong"
+  - family-names: "Liao"
+    given-names: "Zuwei"
+keywords:
+  - "PID control"
+  - "large language model"
+  - "supervised fine-tuning"
+  - "group relative policy optimization"
+  - "chemical process control"
+license: "PolyForm-Noncommercial-1.0.0"

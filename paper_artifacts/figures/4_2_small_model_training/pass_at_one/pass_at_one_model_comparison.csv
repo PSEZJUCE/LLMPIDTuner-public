@@ -1,0 +1,11 @@
+system,model,pass_at_1,total_cases,pass_at_1_rate_pct
+FOPDT,DeepSeek-V4-Flash,57,100,57.0
+FOPDT,Qwen3.7-Plus,80,100,80.0
+FOPDT,Base-0.6B,13,100,13.0
+FOPDT,SFT-0.6B,94,100,94.0
+FOPDT,GRPO-0.6B,92,100,92.0
+SOPDT,DeepSeek-V4-Flash,56,100,56.0
+SOPDT,Qwen3.7-Plus,62,100,62.0
+SOPDT,Base-0.6B,18,100,18.0
+SOPDT,SFT-0.6B,79,100,79.0
+SOPDT,GRPO-0.6B,96,100,96.0

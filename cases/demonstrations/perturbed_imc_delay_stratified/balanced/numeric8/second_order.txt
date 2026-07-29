@@ -1,0 +1,139 @@
+Experiment 1:
+Initial PID parameters and IAE: Kp=5.18731, Ki=0.0208474, Kd=19.2065, IAE=236.26
+Observed process dead time: 51 seconds.
+Response KPI vector:
+Overshoot (%) = 34.05
+Oscillation count = 8
+Attenuation ratio = 0.5864
+Oscillation period (s) = 207.4
+Time to 63.2% of setpoint (s) = 39.9
+Settling time (+/-5%) (s) = 1103
+Steady-state error (%) = 0.00231
+Recommended control style: balanced.
+Suggested PID parameters: P:1.35911; I:0.0208474; D:19.2065
+
+Experiment 2:
+Initial PID parameters and IAE: Kp=0.165259, Ki=0.00710777, Kd=2.37584, IAE=117.491
+Observed process dead time: 24.88 seconds.
+Response KPI vector:
+Overshoot (%) = 15.19
+Oscillation count = 1
+Attenuation ratio = 0
+Oscillation period (s) = 0
+Time to 63.2% of setpoint (s) = 82.02
+Settling time (+/-5%) (s) = 346.3
+Steady-state error (%) = 3.02e-12
+Recommended control style: balanced.
+Suggested PID parameters: P:0.420854; I:0.00710777; D:2.37584
+
+Experiment 3:
+Initial PID parameters and IAE: Kp=2.57329, Ki=0.105222, Kd=46.0709, IAE=63.9248
+Observed process dead time: 4.362 seconds.
+Response KPI vector:
+Overshoot (%) = 49.5
+Oscillation count = 3
+Attenuation ratio = 0.1143
+Oscillation period (s) = 166.3
+Time to 63.2% of setpoint (s) = 25.34
+Settling time (+/-5%) (s) = 252.9
+Steady-state error (%) = 3.22e-13
+Recommended control style: balanced.
+Suggested PID parameters: P:2.57329; I:0.0357586; D:46.0709
+
+Experiment 4:
+Initial PID parameters and IAE: Kp=4.38334, Ki=0.00393114, Kd=116.034, IAE=294.257
+Observed process dead time: 8.199 seconds.
+Response KPI vector:
+Overshoot (%) = 0
+Oscillation count = 0
+Attenuation ratio = 0
+Oscillation period (s) = 0
+Time to 63.2% of setpoint (s) = 54.5
+Settling time (+/-5%) (s) = 1891
+Steady-state error (%) = 1.085
+Recommended control style: balanced.
+Suggested PID parameters: P:4.38334; I:0.0412578; D:116.034
+
+Experiment 5:
+Initial PID parameters and IAE: Kp=2.57329, Ki=0.144601, Kd=92.645, IAE=85.0846
+Observed process dead time: 4.362 seconds.
+Response KPI vector:
+Overshoot (%) = 54.38
+Oscillation count = 3
+Attenuation ratio = 0.2019
+Oscillation period (s) = 188.3
+Time to 63.2% of setpoint (s) = 27.14
+Settling time (+/-5%) (s) = 307.9
+Steady-state error (%) = 0
+Recommended control style: balanced.
+Suggested PID parameters: P:2.57329; I:0.0357586; D:46.0709
+
+Experiment 6:
+Initial PID parameters and IAE: Kp=1.56051, Ki=0.00710777, Kd=0.640739, IAE=160.46
+Observed process dead time: 24.88 seconds.
+Response KPI vector:
+Overshoot (%) = 52.66
+Oscillation count = 12
+Attenuation ratio = 0.6345
+Oscillation period (s) = 110.3
+Time to 63.2% of setpoint (s) = 18.52
+Settling time (+/-5%) (s) = 792.2
+Steady-state error (%) = 1.81e-05
+Recommended control style: balanced.
+Suggested PID parameters: P:0.420854; I:0.00710777; D:2.37584
+
+Experiment 7:
+Initial PID parameters and IAE: Kp=21.4259, Ki=0.339769, Kd=18.751, IAE=49.1654
+Observed process dead time: 2.064 seconds.
+Response KPI vector:
+Overshoot (%) = 86.97
+Oscillation count = 19
+Attenuation ratio = 0.7315
+Oscillation period (s) = 22.8
+Time to 63.2% of setpoint (s) = 4.436
+Settling time (+/-5%) (s) = 220.1
+Steady-state error (%) = 0
+Recommended control style: balanced.
+Suggested PID parameters: P:2.57254; I:0.0407951; D:18.751
+
+Experiment 8:
+Initial PID parameters and IAE: Kp=1.34868, Ki=0.0778146, Kd=18.751, IAE=49.1322
+Observed process dead time: 2.064 seconds.
+Response KPI vector:
+Overshoot (%) = 37.4
+Oscillation count = 2
+Attenuation ratio = 0.08394
+Oscillation period (s) = 165.5
+Time to 63.2% of setpoint (s) = 24.64
+Settling time (+/-5%) (s) = 185.1
+Steady-state error (%) = 2.22e-13
+Recommended control style: balanced.
+Suggested PID parameters: P:2.57254; I:0.0407951; D:18.751
+
+Experiment 9:
+Initial PID parameters and IAE: Kp=1.80286, Ki=0.0492164, Kd=16.4121, IAE=489.283
+Observed process dead time: 6.24 seconds.
+Response KPI vector:
+Overshoot (%) = 87.16
+Oscillation count = 19
+Attenuation ratio = 0.7382
+Oscillation period (s) = 227.6
+Time to 63.2% of setpoint (s) = 43.86
+Settling time (+/-5%) (s) = 2186
+Steady-state error (%) = 0.4932
+Recommended control style: balanced.
+Suggested PID parameters: P:1.80286; I:0.0121708; D:66.3675
+
+Experiment 10:
+Initial PID parameters and IAE: Kp=0.750063, Ki=0.0292539, Kd=27.6116, IAE=487.917
+Observed process dead time: 6.24 seconds.
+Response KPI vector:
+Overshoot (%) = 79.6
+Oscillation count = 13
+Attenuation ratio = 0.6449
+Oscillation period (s) = 333.6
+Time to 63.2% of setpoint (s) = 66.36
+Settling time (+/-5%) (s) = 2204
+Steady-state error (%) = 0.4873
+Recommended control style: balanced.
+Suggested PID parameters: P:1.80286; I:0.0121708; D:66.3675

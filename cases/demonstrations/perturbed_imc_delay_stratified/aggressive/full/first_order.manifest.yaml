@@ -1,0 +1,13 @@
+schema_version: 1
+artifact_type: frozen_demonstration
+demonstration_protocol: perturbed_imc_delay_stratified_v1
+system: first_order
+control_style: aggressive
+prompt_variant: full
+source:
+  path: cases/protocol/perturbed_imc_delay_stratified/sources/demonstration_first_order.yaml
+  sha256: 6be55eb8fedb128229ce01e8fd6ed2d46e6fd1024db938789c9e61de0d47e030
+  count: 10
+prompt:
+  path: cases/demonstrations/perturbed_imc_delay_stratified/aggressive/full/first_order.txt
+  sha256: 518973308904cf5b9a9eadb5505845c01a6325809da59bfe15ff735fb612bb4a

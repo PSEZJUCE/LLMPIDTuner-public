@@ -1,0 +1,129 @@
+Experiment 1:
+Initial PID parameters and IAE: Kp=4.65668, Ki=0.00354573, Kd=96.7027, IAE=635.745
+Observed process dead time: 167.6 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 47.93%, indicating The overshoot is severe.
+Oscillations: The curve contains 6 oscillations. Oscillation is very violent and the curve fluctuates greatly.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.4664.
+Oscillation Period: The period of oscillation is 554.7 seconds.
+The time to 63.2% after the observed dead time is 71.1 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 2961 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+In the final stage, the curve did not converge to the steady-state value; there is a residual error of 2.483%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:2.79058; I:0.0068187; D:185.967
+
+Experiment 2:
+Initial PID parameters and IAE: Kp=1.29872, Ki=0.00763148, Kd=96.7027, IAE=372.834
+Observed process dead time: 77.87 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 15.49%, indicating The overshoot is extremely severe, reaching 100% or more.
+Oscillations: The curve contains 1 oscillations. The oscillation behavior is normal.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.
+Oscillation Period: The period of oscillation is 0 seconds.
+The time to 63.2% after the observed dead time is 239.6 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 1285 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+The control performance is good; the Steady-State Error is within 1%, its value is 0.01968%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:5.34775; I:0.0146759; D:185.967
+
+Experiment 3:
+Initial PID parameters and IAE: Kp=6.54725, Ki=0.11782, Kd=71.6848, IAE=130.788
+Observed process dead time: 22.66 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 43.19%, indicating The overshoot is severe.
+Oscillations: The curve contains 2 oscillations. The curve shows noticeable oscillations.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.07683.
+Oscillation Period: The period of oscillation is 413.7 seconds.
+The time to 63.2% after the observed dead time is 40.44 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 458.4 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+The control performance is good; the Steady-State Error is within 1%, its value is 8.653e-10%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:13.3903; I:0.0397593; D:146.608
+
+Experiment 4:
+Initial PID parameters and IAE: Kp=7.23664, Ki=0.00501073, Kd=256.745, IAE=439.098
+Observed process dead time: 75.89 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 0%, indicating The overshoot is normal.
+Oscillations: The curve contains 0 oscillations. The oscillation behavior is normal.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.
+Oscillation Period: The period of oscillation is 0 seconds.
+The time to 63.2% after the observed dead time is 155.5 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 2209 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+In the final stage, the curve did not converge to the steady-state value; there is a residual error of 1.771%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:13.9166; I:0.0238404; D:493.74
+
+Experiment 5:
+Initial PID parameters and IAE: Kp=5.0195, Ki=0.121666, Kd=191.983, IAE=213.14
+Observed process dead time: 24.68 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 56.94%, indicating The overshoot is severe.
+Oscillations: The curve contains 4 oscillations. Oscillation is very violent and the curve fluctuates greatly.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.2195.
+Oscillation Period: The period of oscillation is 445.4 seconds.
+The time to 63.2% after the observed dead time is 49.52 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 906.1 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+The control performance is good; the Steady-State Error is within 1%, its value is 0.0001423%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:10.4843; I:0.0249236; D:125.581
+
+Experiment 6:
+Initial PID parameters and IAE: Kp=9.80284, Ki=0.00839111, Kd=26.5309, IAE=373.863
+Observed process dead time: 65.04 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 67.71%, indicating The overshoot is severe.
+Oscillations: The curve contains 10 oscillations. Oscillation is very violent and the curve fluctuates greatly.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.5798.
+Oscillation Period: The period of oscillation is 248.3 seconds.
+The time to 63.2% after the observed dead time is 29.26 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 1791 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+The control performance is good; the Steady-State Error is within 1%, its value is 0.4344%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:5.70713; I:0.0161367; D:168.53
+
+Experiment 7:
+Initial PID parameters and IAE: Kp=75.828, Ki=0.158259, Kd=55.9121, IAE=262.488
+Observed process dead time: 15.28 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 98.61%, indicating The overshoot is severe.
+Oscillations: The curve contains 38 oscillations. Oscillation is very violent and the curve fluctuates greatly.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.8547.
+Oscillation Period: The period of oscillation is 59.4 seconds.
+The time to 63.2% after the observed dead time is 6.32 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 1139 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+The control performance is good; the Steady-State Error is within 1%, its value is 0.0009577%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:16.7134; I:0.0348821; D:125.654
+
+Experiment 8:
+Initial PID parameters and IAE: Kp=2.98618, Ki=0.0477712, Kd=3.81075, IAE=131.608
+Observed process dead time: 1.127 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 24.53%, indicating The overshoot is relatively large.
+Oscillations: The curve contains 1 oscillations. The oscillation behavior is normal.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.03541.
+Oscillation Period: The period of oscillation is 681.8 seconds.
+The time to 63.2% after the observed dead time is 85.47 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 442.6 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+The control performance is good; the Steady-State Error is within 1%, its value is 2.502e-07%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:16.7182; I:0.0519656; D:9.40419
+
+Experiment 9:
+Initial PID parameters and IAE: Kp=12.8379, Ki=1.6674, Kd=0.958143, IAE=434.533
+Observed process dead time: 7.319 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 93.72%, indicating The overshoot is severe.
+Oscillations: The curve contains 26 oscillations. Oscillation is very violent and the curve fluctuates greatly.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.7949.
+Oscillation Period: The period of oscillation is 149.2 seconds.
+The time to 63.2% after the observed dead time is 22.08 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 1948 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+The control performance is good; the Steady-State Error is within 1%, its value is 0.02809%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:29.9768; I:0.0801896; D:108.626
+
+Experiment 10:
+Initial PID parameters and IAE: Kp=1.02627, Ki=0.316373, Kd=1.2332, IAE=153.16
+Observed process dead time: 2.424 seconds.
+Overshoot: After reaching the peak value, the curve shows an overshoot of 72.29%, indicating The overshoot is severe.
+Oscillations: The curve contains 9 oscillations. Oscillation is very violent and the curve fluctuates greatly.
+Attenuation Ratio: The attenuation ratio between the first and second peak deviations is 0.5136.
+Oscillation Period: The period of oscillation is 157.5 seconds.
+The time to 63.2% after the observed dead time is 28.18 seconds, measured from the end of the observed dead-time interval.
+The settling time (tc) is 711 seconds, indicating the time when the output enters within +/-5% of the steady-state value and does not leave again.
+The control performance is good; the Steady-State Error is within 1%, its value is 2.652e-06%.
+Recommended control style: aggressive.
+Suggested PID parameters: P:15.9673; I:0.112678; D:19.1868

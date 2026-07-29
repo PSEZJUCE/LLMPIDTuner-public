@@ -1,0 +1,13 @@
+schema_version: 1
+artifact_type: frozen_demonstration
+demonstration_protocol: perturbed_imc_delay_stratified_v1
+system: second_order
+control_style: balanced
+prompt_variant: kpi3
+source:
+  path: cases/protocol/perturbed_imc_delay_stratified/sources/demonstration_second_order.yaml
+  sha256: 9725f2daf38d41aeec44b85a938e4c6509c16c36ceedc0054ba017c3674dca28
+  count: 10
+prompt:
+  path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/kpi3/second_order.txt
+  sha256: 422384242da8cdd952bedc12ab2c1fdbf2d18e3d44dd7053338b3797c1fee5eb

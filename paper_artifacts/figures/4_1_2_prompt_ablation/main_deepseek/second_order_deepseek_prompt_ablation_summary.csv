@@ -1,0 +1,4 @@
+label,batch_path,demonstration_protocol,total,converged,unconverged,llm_failed,context_length_exceeded,convergence_rate,mean_convergence_iteration,mean_final_overshoot,median_final_overshoot,mean_final_steady_state_error,median_final_steady_state_error,analysis_horizon
+Full,runs\second_order_100_deepseek_v4_flash,perturbed_imc_delay_stratified_v1,100,79,21,0,0,0.79,1.759493670886076,10.85997,9.239000000000008,0.00022070000000007362,0.0,
+KPI-3,runs\second_order_100_deepseek_v4_flash_kpi3,perturbed_imc_delay_stratified_v1,100,78,22,0,0,0.78,1.6923076923076923,10.945769999999998,9.149999999999991,0.0007602000000002107,0.0,
+Numeric-8,runs\second_order_100_deepseek_v4_flash_numeric8,perturbed_imc_delay_stratified_v1,100,62,38,0,0,0.62,2.0806451612903225,15.419049999999997,12.214499999999994,0.0056539000000003226,0.0,

@@ -1,0 +1,66 @@
+{
+  "plant": {
+    "system": "first_order",
+    "k": 0.666602,
+    "time_delay": 84.06,
+    "t": 204.269,
+    "tau1": null,
+    "tau2": null
+  },
+  "delay_evaluation": "exact_exp_minus_j_omega_theta",
+  "frequency_range_rad_per_s": [
+    4.895505436458792e-08,
+    489.5505436458787
+  ],
+  "frequency_points": 4096,
+  "controllers": [
+    {
+      "label": "Initial",
+      "pid": {
+        "kp": 0.845198,
+        "ki": 0.0148495,
+        "kd": 61.2866
+      },
+      "phase_margin_deg": 32.938123831806536,
+      "critical_crossover_frequency": 0.005850653560345591,
+      "all_crossovers": [
+        {
+          "frequency_rad_per_s": 0.005850653560345591,
+          "phase_margin_deg": 32.938123831806536
+        }
+      ]
+    },
+    {
+      "label": "SFT-0.6B",
+      "pid": {
+        "kp": 1.69999,
+        "ki": 0.0073859,
+        "kd": 61.287
+      },
+      "phase_margin_deg": 76.20616043593388,
+      "critical_crossover_frequency": 0.004813494633053665,
+      "all_crossovers": [
+        {
+          "frequency_rad_per_s": 0.004813494633053665,
+          "phase_margin_deg": 76.20616043593388
+        }
+      ]
+    },
+    {
+      "label": "GRPO-0.6B",
+      "pid": {
+        "kp": 1.59999,
+        "ki": 0.0063984,
+        "kd": 61.287
+      },
+      "phase_margin_deg": 80.47860069386263,
+      "critical_crossover_frequency": 0.004340466900685013,
+      "all_crossovers": [
+        {
+          "frequency_rad_per_s": 0.004340466900685013,
+          "phase_margin_deg": 80.47860069386263
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+schema_version: 1
+artifact_type: paper_release_snapshot
+project: LLMPIDTuner
+protocol_id: perturbed_imc_delay_stratified_v1
+code_license: PolyForm-Noncommercial-1.0.0
+data_documentation_license: CC-BY-NC-4.0
+prepared_from_internal_commit: 0b064d6d96517b825673fb6e190812b3ccb51c00
+public_release_commit: PENDING
+public_repository_url: PENDING
+software_archive_doi: PENDING
+raw_results_archive:
+  included_in_git: false
+  doi: PENDING
+  checksum_manifest: PENDING
+model_weights:
+  included: false
+  note: "The initial release provides training code, configurations, generators, and logs; weights require retraining."
+included:
+  - figures
+  - companion_csv_and_json
+  - sft_training_curve_input
+  - grpo_training_and_validation_logs
+excluded:
+  - full_case_level_runs
+  - generated_sft_jsonl
+  - sft_checkpoints
+  - grpo_checkpoints
+  - optimizer_state
+  - private_infrastructure

@@ -1,0 +1,34 @@
+output_path: data/sft/pid_sft_messages_40000.jsonl
+control_style: balanced
+format: openai_messages
+count: 40000
+first_order_count: 20000
+second_order_count: 20000
+seed: 81001
+workers: 32
+excluded_plants_paths:
+  - cases/protocol/perturbed_imc_delay_stratified/sources/demonstration_first_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/demonstration_second_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/evaluation_first_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/evaluation_second_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_first_order.yaml
+  - cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_second_order.yaml
+feedback_sample_probability: 0.5
+include_target_metrics: true
+demonstration:
+  method: frozen
+  protocol_id: perturbed_imc_delay_stratified_v1
+  control_style: balanced
+  prompt_variant: full
+  paths:
+    first_order:
+      path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/first_order.txt
+      manifest_path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/first_order.manifest.yaml
+    second_order:
+      path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/second_order.txt
+      manifest_path: cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/second_order.manifest.yaml
+simulation:
+  setpoint: 1.0
+  sim_time: 4000.0
+  num_points: 40001
+  max_abs_output: 3.0

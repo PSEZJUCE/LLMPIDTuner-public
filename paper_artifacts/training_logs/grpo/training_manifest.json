@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "grpo_adapter",
+  "demonstration_protocol": "perturbed_imc_delay_stratified_v1",
+  "config": {
+    "model_name_or_path": "outputs/sft/qwen3_0p6b_pid",
+    "output_dir": "outputs/grpo/qwen3_0p6b_pid",
+    "control_style": "balanced",
+    "prompt_data_path": null,
+    "seed": 91001,
+    "train_steps": 800,
+    "prompts_per_step": 4,
+    "num_generations": 4,
+    "num_policy_epochs": 1,
+    "micro_batch_size": 4,
+    "learning_rate": 1e-05,
+    "min_learning_rate": 1e-06,
+    "warmup_steps": 50,
+    "lr_decay_steps": 800,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "max_prompt_length": 6144,
+    "max_completion_length": 64,
+    "temperature": 0.9,
+    "top_p": 0.95,
+    "top_k": 50,
+    "clip_range": 0.2,
+    "beta_kl": 0.1,
+    "adaptive_kl": true,
+    "target_kl": 0.05,
+    "kl_tolerance": 2.0,
+    "beta_kl_min": 0.02,
+    "beta_kl_max": 1.0,
+    "kl_ema_alpha": 0.1,
+    "kl_update_interval": 10,
+    "kl_beta_multiplier": 1.5,
+    "kl_guard_multiplier": 4.0,
+    "kl_guard_patience": 25,
+    "bf16": true,
+    "use_qlora": true,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "second_order_prob": 0.5,
+    "excluded_plants_paths": [
+      "cases/protocol/perturbed_imc_delay_stratified/sources/demonstration_first_order.yaml",
+      "cases/protocol/perturbed_imc_delay_stratified/sources/demonstration_second_order.yaml",
+      "cases/protocol/perturbed_imc_delay_stratified/sources/evaluation_first_order.yaml",
+      "cases/protocol/perturbed_imc_delay_stratified/sources/evaluation_second_order.yaml",
+      "cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_first_order.yaml",
+      "cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_second_order.yaml"
+    ],
+    "demonstration": {
+      "method": "frozen",
+      "protocol_id": "perturbed_imc_delay_stratified_v1",
+      "control_style": "balanced",
+      "prompt_variant": "full",
+      "paths": {
+        "first_order": {
+          "path": "cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/first_order.txt",
+          "manifest_path": "cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/first_order.manifest.yaml"
+        },
+        "second_order": {
+          "path": "cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/second_order.txt",
+          "manifest_path": "cases/demonstrations/perturbed_imc_delay_stratified/balanced/full/second_order.manifest.yaml"
+        }
+      }
+    },
+    "simulation": {
+      "setpoint": 1.0,
+      "sim_time": 4000.0,
+      "num_points": 40001,
+      "time_delay": 1.0,
+      "max_abs_output": 3.0
+    },
+    "reward": {
+      "schema_version": 2,
+      "invalid_reward": -1.0,
+      "min_reward": -1.0,
+      "max_reward": 1.0,
+      "failed_branch_min": -0.5,
+      "failed_branch_max": 0.0,
+      "success_branch_min": 0.5,
+      "success_branch_max": 1.0,
+      "stability_weight": 0.35,
+      "performance_weight": 0.35,
+      "format_weight": 0.05,
+      "iae_weight": 0.15,
+      "regularization_weight": 0.1,
+      "pade_order": 1,
+      "routh_relative_tolerance": 1e-09,
+      "controller_zero_tolerance": 1e-12,
+      "phase_log10_min": -5.0,
+      "phase_log10_max": 5.0,
+      "phase_grid_points": 2048,
+      "phase_bisection_iterations": 64,
+      "gain_reference_imc_lambda": 10.0,
+      "gain_calibration_seed": 3407,
+      "gain_calibration_samples": 1024,
+      "gain_calibration_quantile": 0.05,
+      "gain_floor_min": 0.01,
+      "gain_multiplier_p": 4.0,
+      "gain_multiplier_i": 4.0,
+      "gain_multiplier_d": 6.0
+    },
+    "save_every": 50,
+    "log_every": 1,
+    "save_rollouts_every": 20,
+    "validation_cases_paths": [
+      "cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_first_order.yaml",
+      "cases/protocol/perturbed_imc_delay_stratified/sources/grpo_validation_second_order.yaml"
+    ],
+    "validate_every": 50,
+    "validation_batch_size": 8,
+    "resume_from_checkpoint": null
+  },
+  "status": "complete",
+  "distributed": {
+    "world_size": 5,
+    "rank_seed_stride": 100003
+  },
+  "python_version": "3.12.11",
+  "package_versions": {
+    "torch": "2.7.1",
+    "transformers": "4.54.0",
+    "accelerate": "1.9.0",
+    "peft": "0.17.0",
+    "bitsandbytes": "0.46.1"
+  },
+  "git_commit": null,
+  "source_tree_sha256": "73509a7f245d4e7ad5acadb7a7189f96ae44722dcea5747b89ee5ae659d7b93f",
+  "source_model_manifest": {
+    "path": "outputs/sft/qwen3_0p6b_pid/training_manifest.json",
+    "sha256": "6f1885aad9a12386768460218c79be633d656750d975bb79de69b18299105cb6"
+  },
+  "train_steps_completed": 800,
+  "tokens": 2007852,
+  "elapsed_sec": 24385.582979917526,
+  "latest_adapter_path": "lora_adapter",
+  "baseline_validation": {
+    "count": 200,
+    "reward_mean": -0.18950460474427977,
+    "success_count": 1,
+    "success_rate": 0.005,
+    "iae_improvement_mean": 0.0031417780622803033,
+    "iae_improvement_median": 0.0,
+    "step": 0,
+    "kl_ema": 0.0,
+    "source_model": "sft"
+  },
+  "best_validation": {
+    "count": 200,
+    "reward_mean": 0.40673000052392394,
+    "success_count": 109,
+    "success_rate": 0.545,
+    "iae_improvement_mean": 0.3297817852642659,
+    "iae_improvement_median": 0.524087451529129,
+    "step": 100,
+    "kl_ema": 0.15586286871810884,
+    "source_model": "grpo"
+  },
+  "best_validation_step": 100,
+  "selected_model_source": "grpo",
+  "selected_model_path": "best-validation-checkpoint",
+  "adaptive_kl": {
+    "beta": 0.7593750000000001,
+    "ema": 0.07430012498383427,
+    "guard_steps": 0
+  }
+}

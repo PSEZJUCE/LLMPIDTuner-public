@@ -1,0 +1,6 @@
+model,pass_at_1,total_cases,pass_at_1_rate_pct
+DeepSeek-V4-Flash,113,200,56.5
+Qwen3.7-Plus,142,200,71.0
+Base-0.6B,31,200,15.5
+SFT-0.6B,173,200,86.5
+GRPO-0.6B,188,200,94.0

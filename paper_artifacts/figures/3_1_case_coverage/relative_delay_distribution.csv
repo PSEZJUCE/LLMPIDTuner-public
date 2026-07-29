@@ -1,0 +1,9 @@
+system,rho_range,cases
+FOPDT,<0.1,52
+FOPDT,0.1-0.3,23
+FOPDT,0.3-0.5,15
+FOPDT,>=0.5,10
+SOPDT,<0.1,52
+SOPDT,0.1-0.3,25
+SOPDT,0.3-0.5,13
+SOPDT,>=0.5,10
